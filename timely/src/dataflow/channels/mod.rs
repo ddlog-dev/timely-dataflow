@@ -46,15 +46,15 @@ impl<T, D> Message<T, D> {
 
         pusher.push(&mut bundle);
 
-        if let Some(message) = bundle {
+        /*if let Some(message) = bundle {
             if let Some(message) = message.if_typed() {
                 *buffer = message.data;
                 buffer.clear();
             }
-        }
+        }*/
 
         // TODO: Unclear we always want this here.
-        if buffer.capacity() != Self::default_length() {
+        /*if buffer.capacity() != Self::default_length() {
             *buffer = Vec::with_capacity(Self::default_length());
-        }
+        }*/
     }}
